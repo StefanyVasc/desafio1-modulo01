@@ -38,9 +38,9 @@ app.post('/checar', (req, res) => {
   const { idade } = req.body
 
   if (idade >= 18) {
-    return res.redirect(`/maior?idade = ${req.body.idade}`)
+    return res.redirect(`/maior?idade=${idade}`)
   } else {
-    return res.redirect(`/menor?idade = ${req.body.idade}`)
+    return res.redirect(`/menor?idade=${idade}`)
   }
 })
 
